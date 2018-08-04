@@ -5,6 +5,7 @@
 	<title>Yapılacaklar Listesi</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">	
 	<link rel="stylesheet" type="text/css" href="assets/css/mycss.css">
+  <link rel="shortcut icon" type="image/png" href="favicon.ico.ico"/>
 
 </head>
 <body>
