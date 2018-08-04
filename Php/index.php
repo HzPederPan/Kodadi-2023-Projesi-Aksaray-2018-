@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Yapılacaklar Listesi</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootsrap.css">
 </head>
 <body>
+<script type="text/javascript" src="assests/js/bootsrap.js"></script>
+<div class="alert alert-primary" role="alert">
+  A simple primary alert—check it out!
+</div>
+<hr>
 <?php
 //Yapımcı: HzPederPan
 echo "<p>hello word</p>";
@@ -20,5 +26,11 @@ function myTest() {
 myTest();
 echo $y; // outputs 15
 ?>
+<hr>
+<?php
+$caluor = "yeşil";
+echo "Benim Arabam " . $caluor . "'dir";	
+?>
+
 </body>
 </html>
