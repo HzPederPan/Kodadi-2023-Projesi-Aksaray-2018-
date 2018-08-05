@@ -14,13 +14,25 @@ var mainView = myApp.addView('.view-main', {
 myApp.onPageInit('about', function (page) {
     // run createContentPage func after link was clicked
     $$('#baslik').html("Burası Hakkında Sayfası !")
-    $$('#icerik').html("Merhaba Ben Arda Doğanyiğit ! Bu uygulamanın Yaratıcısı olan Türküm. Bu Uygulamayı T.C. Gençlik ve Spor Bakanığının Kod Adı 2023 Aksaray Yaz Kodlama Eğitim Kamp'nda geliştirdim. Uygulamam bir tür To Do List ya da Türkçesile Yapılacaklar Listesi.")
+    $$('#icerik').html("Merhaba Ben Arda Doğanyiğit ! Bu uygulamanın Yaratıcısı olan Türk Kodlamacıyım. Bu Uygulamayı T.C. Gençlik ve Spor Bakanığının Kod Adı 2023 Aksaray Yaz Kodlama Eğitim Kamp'nda geliştirdim. Uygulamam bir tür To Do List ya da Türkçesile Yapılacaklar Listesi.")
 });
 
 myApp.onPageInit('form', function (page) {
     // run createContentPage func after link was clicked
-    $$('#baslik').html("Burası Hakkında Sayfası !")
-    $$('#icerik').html("Merhaba Ben Arda Doğanyiğit ! Bu uygulamanın Yaratıcısı olan Türküm. Bu Uygulamayı T.C. Gençlik ve Spor Bakanığının Kod Adı 2023 Aksaray Yaz Kodlama Eğitim Kamp'nda geliştirdim. Uygulamam bir tür To Do List ya da Türkçesile Yapılacaklar Listesi.")
+    $$('#form').on("submit",function(e){
+
+        event.preventDefault();
+        var formData = myApp.formToJSON($$('#form'));
+        console.log(formData)
+        $$.ajax({
+            url: "ajax.php",
+            data: formData,
+            type: "post",
+            succes:function(r){
+                console.log(r);
+            }
+        })
+    })
 });
 
 
